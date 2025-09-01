@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Let's Tour It!!</title>
+	<link rel="stylesheet" href="index1.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body style="background: url('abt.jpg') no-repeat center center fixed; background-size: cover; margin:0;">
+	<header class="main-header" style="background:#fffbe6;box-shadow:0 2px 18px rgba(10,61,98,0.08);border-radius:22px 22px 0 0;position:relative;">
+		<img src="index1logofinal.jpg" alt="Logo" class="logo" style="max-width:120px; vertical-align:middle;">
+		<button class="nav-toggle" aria-label="Toggle navigation" style="display:none;position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;z-index:1001;">
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+		</button>
+		<nav class="navbar" style="background:#fffbe6;box-shadow:0 2px 18px rgba(10,61,98,0.08);border-radius:22px 22px 0 0;">
+			<ul class="nav-list" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px;margin:0;padding:0;list-style:none;">
+				<li><a href="indexhome.html">HOME</a></li>
+				<li><a href="indexservice.html">SERVICE</a></li>
+				<li><a href="indexgallery.html">GALLERY</a></li>
+				<li><a href="indexcontact.html">CONTACT</a></li>
+				<li><a href="indexcontact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<script>
+		// Responsive navbar toggle
+		const navToggle = document.querySelector('.nav-toggle');
+		const navbar = document.querySelector('.navbar');
+		navToggle.style.display = window.innerWidth <= 900 ? 'block' : 'none';
+		window.addEventListener('resize', function() {
+			navToggle.style.display = window.innerWidth <= 900 ? 'block' : 'none';
+			if(window.innerWidth > 900) {
+				navbar.style.display = 'block';
+			} else {
+				navbar.style.display = 'none';
+			}
+		});
+		navToggle.addEventListener('click', function() {
+			if(navbar.style.display === 'block') {
+				navbar.style.display = 'none';
+			} else {
+				navbar.style.display = 'block';
+			}
+		});
+		if(window.innerWidth <= 900) {
+			navbar.style.display = 'none';
+		}
+		</script>
+	</header>
+<main>
+	<!-- Hero Section with Overlay & AI Greeting -->
+	<section class="hero" style="position:relative;min-height:340px;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(120deg,#e3f0ff 0%,#fffbe6 100%), url('abt.jpg') center/cover no-repeat;">
+		<div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.18);backdrop-filter:blur(2px);"></div>
+	<h1 style="position:relative;color:#14375a;font-size:2.8em;z-index:1;animation:fadeInDown 1s;">LETS EXPLORE !</h1>
+	<p id="ai-greeting" style="position:relative;color:#2d3e50;font-size:1.25em;max-width:700px;z-index:1;animation:fadeInUp 1.2s;"></p>
+		<script>
+		// AI-powered personalized greeting
+		const greetings = [
+			"Welcome, adventurer! Ready to discover new places?",
+			"Hello, explorer! Your next journey awaits.",
+			"Namaste! Let us help you create unforgettable memories.",
+			"Hi there! Find your perfect travel experience with us."
+		];
+		document.getElementById('ai-greeting').textContent = greetings[Math.floor(Math.random() * greetings.length)] + "\nOur travel agency is best known all over the world for its exploration and best air flights packages. Founded in 2014, we offer all types of packages, full safety, and the best facilities.";
+		</script>
+	<span style="font-size:1.3em; font-weight:700; color:#f7b731; display:block; margin-top:18px;position:relative;z-index:1;">Remember that happiness is a way of travel, not a destination</span>
+	</section>
+	<!-- Animated Fun Facts Section -->
+	<section style="max-width:900px;margin:48px auto 0 auto;padding:32px 18px;background:linear-gradient(120deg,#e3f0ff 0%,#fffbe6 100%);backdrop-filter:blur(10px);border-radius:22px;box-shadow:0 4px 24px rgba(10,61,98,0.10);animation:fadeInUp 1.1s;">
+		<h2 style="color:#0a3d62;text-align:center;margin-bottom:18px;">Fun Facts Powered by AI</h2>
+		<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:38px;">
+			<div style="background:rgba(255,255,255,0.65);border-radius:18px;padding:18px 14px;box-shadow:0 2px 8px rgba(10,61,98,0.07);width:220px;text-align:center;animation:fadeInUp 1.2s;">
+				<span style="font-size:2.2em;font-weight:700;color:#f7b731;" id="ai-fact1">120+</span><br>
+				<span style="font-size:1.1em;color:#14375a;">Trips Organized</span>
+			</div>
+			<div style="background:rgba(255,255,255,0.65);border-radius:18px;padding:18px 14px;box-shadow:0 2px 8px rgba(10,61,98,0.07);width:220px;text-align:center;animation:fadeInUp 1.3s;">
+				<span style="font-size:2.2em;font-weight:700;color:#f7b731;" id="ai-fact2">500+</span><br>
+				<span style="font-size:1.1em;color:#14375a;">Happy Customers</span>
+			</div>
+			<div style="background:rgba(255,255,255,0.65);border-radius:18px;padding:18px 14px;box-shadow:0 2px 8px rgba(10,61,98,0.07);width:220px;text-align:center;animation:fadeInUp 1.4s;">
+				<span style="font-size:2.2em;font-weight:700;color:#f7b731;" id="ai-fact3">35+</span><br>
+				<span style="font-size:1.1em;color:#14375a;">Destinations</span>
+			</div>
+		</div>
+		<script>
+		// AI-powered fun facts animation
+		function animateFact(id, end) {
+			let i = 0;
+			const el = document.getElementById(id);
+			const interval = setInterval(() => {
+				el.textContent = i + (id === 'ai-fact3' ? '+' : '');
+				i++;
+				if (i > end) clearInterval(interval);
+			}, 18);
+		}
+		animateFact('ai-fact1', 120);
+		animateFact('ai-fact2', 500);
+		animateFact('ai-fact3', 35);
+		</script>
+	</section>
+	<!-- AI Chatbot Widget -->
+	<div id="ai-chatbot" style="position:fixed;bottom:24px;right:24px;z-index:9999;">
+		<button id="ai-chat-open" style="background:#0a3d62;color:#fff;border-radius:50%;width:56px;height:56px;box-shadow:0 4px 18px rgba(10,61,98,0.18);font-size:2em;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:box-shadow 0.2s;">💬</button>
+		<div id="ai-chatbox" style="display:none;position:absolute;bottom:70px;right:0;width:320px;background:#fffbe6;border-radius:18px;box-shadow:0 4px 24px rgba(10,61,98,0.13);padding:18px;transition:opacity 0.3s;opacity:0;">
+			<div style="font-weight:700;color:#0a3d62;margin-bottom:8px;">AI Assistant</div>
+			<div id="ai-chatlog" style="height:120px;overflow-y:auto;font-size:1em;color:#14375a;background:rgba(255,255,255,0.7);border-radius:8px;padding:8px;margin-bottom:8px;">Hi! How can I help you plan your next adventure?</div>
+			<input id="ai-userinput" type="text" placeholder="Type your question..." style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;margin-bottom:8px;">
+			<button onclick="aiSendMessage()" style="background:#f7b731;color:#fff;padding:8px 18px;border:none;border-radius:6px;cursor:pointer;">Send</button>
+			<button id="ai-chat-close" style="background:#14375a;color:#fff;padding:4px 12px;border:none;border-radius:6px;cursor:pointer;float:right;margin-top:6px;">Close</button>
+		</div>
+		<script>
+		// Improved open/close logic with transitions
+		const chatOpenBtn = document.getElementById('ai-chat-open');
+		const chatBox = document.getElementById('ai-chatbox');
+		const chatCloseBtn = document.getElementById('ai-chat-close');
+		chatOpenBtn.onclick = function() {
+			chatBox.style.display = 'block';
+			setTimeout(() => { chatBox.style.opacity = 1; }, 10);
+		};
+		chatCloseBtn.onclick = function() {
+			chatBox.style.opacity = 0;
+			setTimeout(() => { chatBox.style.display = 'none'; }, 300);
+		};
+		// Simple AI chatbot logic
+		function aiSendMessage() {
+			var input = document.getElementById('ai-userinput').value;
+			var chatlog = document.getElementById('ai-chatlog');
+			if(input.trim() === '') return;
+			chatlog.innerHTML += '<br><b>You:</b> ' + input;
+			setTimeout(function() {
+				chatlog.innerHTML += '<br><b>AI:</b> ' + aiBotReply(input);
+				chatlog.scrollTop = chatlog.scrollHeight;
+			}, 600);
+			document.getElementById('ai-userinput').value = '';
+		}
+		function aiBotReply(msg) {
+			msg = msg.toLowerCase();
+			if(msg.includes('package')) return 'We offer adventure, luxury, and family packages. Which interests you?';
+			if(msg.includes('price') || msg.includes('cost')) return 'Prices vary by destination and package. Would you like a quote?';
+			if(msg.includes('safety')) return 'Safety is our top priority! All trips include medical support and insurance.';
+			if(msg.includes('contact')) return 'You can reach us via the contact page or chat here for quick help.';
+			if(msg.includes('destination')) return 'We cover 35+ destinations worldwide. Tell me your dream place!';
+			return 'I am here to help! Ask me anything about your travel plans.';
+		}
+		// Scroll-to-top button
+		const scrollBtn = document.createElement('button');
+		scrollBtn.textContent = '↑';
+		scrollBtn.title = 'Back to Top';
+		scrollBtn.style.position = 'fixed';
+		scrollBtn.style.right = '24px';
+		scrollBtn.style.bottom = '90px';
+		scrollBtn.style.background = '#f7b731';
+		scrollBtn.style.color = '#fff';
+		scrollBtn.style.border = 'none';
+		scrollBtn.style.borderRadius = '50%';
+		scrollBtn.style.width = '44px';
+		scrollBtn.style.height = '44px';
+		scrollBtn.style.fontSize = '1.6em';
+		scrollBtn.style.boxShadow = '0 2px 12px rgba(243,156,18,0.13)';
+		scrollBtn.style.cursor = 'pointer';
+		scrollBtn.style.display = 'none';
+		document.body.appendChild(scrollBtn);
+		window.addEventListener('scroll', function() {
+			scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+		});
+		scrollBtn.onclick = function() {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		};
+		// Animated section reveal
+		document.querySelectorAll('section').forEach(function(sec) {
+			sec.style.opacity = 0;
+			sec.style.transform = 'translateY(40px)';
+		});
+		window.addEventListener('DOMContentLoaded', function() {
+			document.querySelectorAll('section').forEach(function(sec, i) {
+				setTimeout(function() {
+					sec.style.opacity = 1;
+					sec.style.transform = 'translateY(0)';
+					sec.style.transition = 'opacity 0.7s, transform 0.7s';
+				}, 400 + i * 200);
+			});
+		});
+		</script>
+	</div>
+
+	<!-- Why Choose Us Section -->
+	<section style="max-width:900px;margin:48px auto 0 auto;padding:32px 18px;background:rgba(255,255,255,0.45);backdrop-filter:blur(10px);border-radius:22px;box-shadow:0 4px 24px rgba(10,61,98,0.10);animation:fadeInUp 1.1s;">
+	<h2 style="color:#14375a;text-align:center;margin-bottom:18px;">Why Choose Us?</h2>
+		<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:38px;">
+			<div style="display:flex;flex-direction:column;align-items:center;max-width:180px;">
+				<img src="SAFE.jpg" alt="Safety" style="width:54px;height:54px;margin-bottom:8px;">
+				<span style="font-weight:700;color:#0a3d62;">Safety First</span>
+			</div>
+			<div style="display:flex;flex-direction:column;align-items:center;max-width:180px;">
+				<img src="4MEALS.JPG" alt="Meals" style="width:54px;height:54px;margin-bottom:8px;">
+				<span style="font-weight:700;color:#0a3d62;">Healthy Meals</span>
+			</div>
+			<div style="display:flex;flex-direction:column;align-items:center;max-width:180px;">
+				<img src="HOTEL.JPG" alt="Hotel" style="width:54px;height:54px;margin-bottom:8px;">
+				<span style="font-weight:700;color:#0a3d62;">Premium Hotels</span>
+			</div>
+			<div style="display:flex;flex-direction:column;align-items:center;max-width:180px;">
+				<img src="TRAVEL.jpg" alt="Travel" style="width:54px;height:54px;margin-bottom:8px;">
+				<span style="font-weight:700;color:#0a3d62;">Travel Support</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- Timeline Section -->
+	<section style="max-width:900px;margin:48px auto 0 auto;padding:32px 18px;background:linear-gradient(120deg,#e3f0ff 0%,#fffbe6 100%);backdrop-filter:blur(10px);border-radius:22px;box-shadow:0 4px 24px rgba(10,61,98,0.10);animation:fadeInUp 1.2s;">
+	<h2 style="color:#14375a;text-align:center;margin-bottom:18px;">Our Journey</h2>
+		<ul style="list-style:none;padding:0;margin:0;">
+			<li style="margin-bottom:18px;position:relative;padding-left:28px;">
+				<span style="position:absolute;left:0;top:0;width:18px;height:18px;background:#f7b731;border-radius:50%;"></span>
+				<span style="font-weight:700;color:#f7b731;">2014:</span> Agency founded
+			</li>
+			<li style="margin-bottom:18px;position:relative;padding-left:28px;">
+				<span style="position:absolute;left:0;top:0;width:18px;height:18px;background:#0a3d62;border-radius:50%;"></span>
+				<span style="font-weight:700;color:#0a3d62;">2016:</span> First 1000 customers
+			</li>
+			<li style="margin-bottom:18px;position:relative;padding-left:28px;">
+				<span style="position:absolute;left:0;top:0;width:18px;height:18px;background:#f7b731;border-radius:50%;"></span>
+				<span style="font-weight:700;color:#f7b731;">2019:</span> Expanded to 35+ destinations
+			</li>
+			<li style="margin-bottom:18px;position:relative;padding-left:28px;">
+				<span style="position:absolute;left:0;top:0;width:18px;height:18px;background:#0a3d62;border-radius:50%;"></span>
+				<span style="font-weight:700;color:#0a3d62;">2023:</span> Won "Best Travel Experience" award
+			</li>
+		</ul>
+	</section>
+
+	<!-- Testimonials Section -->
+	<section style="max-width:900px;margin:48px auto 0 auto;padding:32px 18px;background:linear-gradient(120deg,#e3f0ff 0%,#fffbe6 100%);backdrop-filter:blur(10px);border-radius:22px;box-shadow:0 4px 24px rgba(10,61,98,0.10);animation:fadeInUp 1.3s;">
+	<h2 style="color:#14375a;text-align:center;margin-bottom:18px;">Testimonials</h2>
+		<div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;">
+			<div style="background:linear-gradient(120deg,#fffbe6 60%,#e3f0ff 100%);backdrop-filter:blur(8px);border-radius:18px;padding:22px 18px;box-shadow:0 4px 18px rgba(10,61,98,0.10);max-width:320px;">
+				<p style="font-size:1.08em;color:#14375a;">“The best travel experience ever! Everything was perfectly organized.”</p>
+				<span style="font-weight:700;color:#0a3d62;">- Priya S.</span>
+			</div>
+			<div style="background:linear-gradient(120deg,#fffbe6 60%,#e3f0ff 100%);backdrop-filter:blur(8px);border-radius:18px;padding:22px 18px;box-shadow:0 4px 18px rgba(10,61,98,0.10);max-width:320px;">
+				<p style="font-size:1.08em;color:#14375a;">“Amazing destinations and friendly staff. Highly recommended!”</p>
+				<span style="font-weight:700;color:#0a3d62;">- Amit R.</span>
+			</div>
+			<div style="background:linear-gradient(120deg,#fffbe6 60%,#e3f0ff 100%);backdrop-filter:blur(8px);border-radius:18px;padding:22px 18px;box-shadow:0 4px 18px rgba(10,61,98,0.10);max-width:320px;">
+				<p style="font-size:1.08em;color:#14375a;">“I loved the adventure package! Will book again.”</p>
+				<span style="font-weight:700;color:#0a3d62;">- Khushal M.</span>
+			</div>
+		</div>
+	</section>
+	<section class="about-story" style="background:rgba(255,255,255,0.45);backdrop-filter:blur(12px);margin:40px auto 0 auto;max-width:800px;padding:32px 24px;border-radius:22px;box-shadow:0 4px 24px rgba(10,61,98,0.10);animation: fadeInUp 1.1s cubic-bezier(.68,-0.55,.27,1.55);">
+		<h2 style="color:#0a3d62;">Our Story</h2>
+		<p style="font-size:1.1em;line-height:1.7;">Founded in 2014, Aspire to Inspire was born from a passion for adventure and a love for connecting people with the world’s most beautiful destinations. Our team is dedicated to making every journey memorable, safe, and full of joy. We believe travel is not just about places, but about the experiences and stories you create along the way.</p>
+	</section>
+	<section class="about-team" style="margin:40px auto 0 auto;max-width:900px;animation: fadeInUp 1.3s cubic-bezier(.68,-0.55,.27,1.55);">
+		<h2 style="color:#0a3d62;text-align:center;">Meet Our Team</h2>
+	<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:32px;">
+			<div style="background:rgba(255,255,255,0.65);backdrop-filter:blur(8px);border-radius:18px;padding:22px 18px;box-shadow:0 4px 18px rgba(10,61,98,0.10);width:220px;text-align:center;transition:transform 0.2s;">
+				<img src="ati.jpg" alt="Founder" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:10px;box-shadow:0 2px 12px rgba(10,61,98,0.12);">
+				<h3 style="margin:0;color:#0a3d62;font-size:1.18em;">Khushal</h3>
+				<p style="font-size:1em;color:#14375a;">Founder &amp; Explorer</p>
+			</div>
+			<div style="background:rgba(255,255,255,0.65);backdrop-filter:blur(8px);border-radius:18px;padding:22px 18px;box-shadow:0 4px 18px rgba(10,61,98,0.10);width:220px;text-align:center;transition:transform 0.2s;">
+				<img src="abt.jpg" alt="Travel Expert" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:10px;box-shadow:0 2px 12px rgba(10,61,98,0.12);">
+				<h3 style="margin:0;color:#0a3d62;font-size:1.18em;">Priya</h3>
+				<p style="font-size:1em;color:#14375a;">Travel Expert</p>
+			</div>
+			<div style="background:rgba(255,255,255,0.65);backdrop-filter:blur(8px);border-radius:18px;padding:22px 18px;box-shadow:0 4px 18px rgba(10,61,98,0.10);width:220px;text-align:center;transition:transform 0.2s;">
+				<img src="logoati.jpg" alt="Support" style="width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:10px;box-shadow:0 2px 12px rgba(10,61,98,0.12);">
+				<h3 style="margin:0;color:#0a3d62;font-size:1.18em;">Amit</h3>
+				<p style="font-size:1em;color:#14375a;">Customer Support</p>
+			</div>
+		</div>
+	</section>
+	<section class="about-cta" style="text-align:center;margin:48px 0 24px 0;animation: fadeInUp 1.5s cubic-bezier(.68,-0.55,.27,1.55);">
+		<a href="indexservice.html" class="cta-btn" style="font-size:1.18em;padding:14px 38px;border-radius:8px;background:#f7b731;color:#fff;box-shadow:0 2px 12px rgba(243,156,18,0.13);transition:background 0.2s;">Discover Our Services</a>
+	</section>
+	<!-- Modern Footer -->
+	<footer style="background:#f7f7fa;color:#14375a;padding:32px 0 18px 0;margin-top:48px;text-align:center;border-radius:22px 22px 0 0;box-shadow:0 -2px 18px rgba(10,61,98,0.08);">
+		<div style="margin-bottom:12px;">
+			<a href="#" style="margin:0 12px;color:#14375a;">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:22px;height:22px;vertical-align:middle;">
+			</a>
+			<a href="#" style="margin:0 12px;color:#14375a;">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:22px;height:22px;vertical-align:middle;">
+			</a>
+			<a href="#" style="margin:0 12px;color:#14375a;">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" style="width:22px;height:22px;vertical-align:middle;">
+			</a>
+		</div>
+		<div style="font-size:1.08em;">&copy; 2025 Aspire to Inspire. All rights reserved.</div>
+	</footer>
+</main>
+</body>
+</html>

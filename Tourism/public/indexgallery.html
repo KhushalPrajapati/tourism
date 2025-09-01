@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Let's Tour It!!</title>
+	<link rel="stylesheet" href="index1.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body style="background: url('index1.jpg') no-repeat center center fixed; background-size: cover; margin:0;">
+	<header class="main-header" style="background:#fffbe6;box-shadow:0 2px 18px rgba(10,61,98,0.08);border-radius:22px 22px 0 0;position:relative;">
+		<img src="index1logofinal.jpg" alt="Logo" class="logo" style="max-width:120px; vertical-align:middle;">
+		<button class="nav-toggle" aria-label="Toggle navigation" style="display:none;position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;z-index:1001;">
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+		</button>
+		<nav class="navbar" style="background:#fffbe6;box-shadow:0 2px 18px rgba(10,61,98,0.08);border-radius:22px 22px 0 0;">
+			<ul class="nav-list" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px;margin:0;padding:0;list-style:none;">
+				<li><a href="indexhome.html">HOME</a></li>
+				<li><a href="indexabout.html">ABOUT</a></li>
+				<li><a href="indexservice.html">SERVICE</a></li>
+				<li><a href="indexgallery.html">GALLERY</a></li>
+				<li><a href="indexcontact.html">CONTACT</a></li>
+			</ul>
+		</nav>
+		<script>
+		// Responsive navbar toggle
+		const navToggle = document.querySelector('.nav-toggle');
+		const navbar = document.querySelector('.navbar');
+		navToggle.style.display = window.innerWidth <= 900 ? 'block' : 'none';
+		window.addEventListener('resize', function() {
+			navToggle.style.display = window.innerWidth <= 900 ? 'block' : 'none';
+			if(window.innerWidth > 900) {
+				navbar.style.display = 'block';
+			} else {
+				navbar.style.display = 'none';
+			}
+		});
+		navToggle.addEventListener('click', function() {
+			if(navbar.style.display === 'block') {
+				navbar.style.display = 'none';
+			} else {
+				navbar.style.display = 'block';
+			}
+		});
+		if(window.innerWidth <= 900) {
+			navbar.style.display = 'none';
+		}
+		</script>
+	</header>
+	<main>
+		<section class="hero">
+			<h1>LETS EXPLORE !</h1>
+			<p>Enjoy our travel gallery and relive the best moments from our adventures around the world!</p>
+		</section>
+		<section class="features" style="flex-wrap:wrap;">
+			<div class="gallery-grid">
+				<!-- Enhanced trip gallery with overlay and titles -->
+				<!-- Advanced gallery: overlay, descriptions, ratings, Book Now, filter, lightbox, animation, lazy loading -->
+				<div class="gallery-item" data-type="adventure">
+							<img src="ADVENTURE.jpg" alt="Adventure Trip" loading="lazy">
+							<div class="gallery-overlay">Adventure</div>
+				</div>
+				<div class="gallery-item" data-type="beach">
+							<img src="beachday.jpg" alt="Beach Day Trip" loading="lazy">
+							<div class="gallery-overlay">Beach Day</div>
+				</div>
+				<div class="gallery-item" data-type="trekking">
+							<img src="trekking.jpg" alt="Trekking Trip" loading="lazy">
+							<div class="gallery-overlay">Trekking</div>
+				</div>
+				<div class="gallery-item" data-type="rafting">
+							<img src="rafting.jpg" alt="Rafting Trip" loading="lazy">
+							<div class="gallery-overlay">Rafting</div>
+				</div>
+				<div class="gallery-item" data-type="rafting">
+							<img src="riverrafting.jpg" alt="River Rafting Trip" loading="lazy">
+							<div class="gallery-overlay">River Rafting</div>
+				</div>
+				<div class="gallery-item" data-type="nature">
+							<img src="natureimg.jpg" alt="Nature Trip" loading="lazy">
+							<div class="gallery-overlay">Nature</div>
+				</div>
+				<div class="gallery-item" data-type="mountain">
+							<img src="mountainholiday.jpg" alt="Mountain Holiday Trip" loading="lazy">
+							<div class="gallery-overlay">Mountain Holiday</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG1.jpg" alt="Trip Image 1" loading="lazy">
+							<div class="gallery-overlay">Trip 1</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG2.jpg" alt="Trip Image 2" loading="lazy">
+							<div class="gallery-overlay">Trip 2</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG3.jpg" alt="Trip Image 3" loading="lazy">
+							<div class="gallery-overlay">Trip 3</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG4.jpg" alt="Trip Image 4" loading="lazy">
+							<div class="gallery-overlay">Trip 4</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG5.jpg" alt="Trip Image 5" loading="lazy">
+							<div class="gallery-overlay">Trip 5</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG6.jpg" alt="Trip Image 6" loading="lazy">
+							<div class="gallery-overlay">Trip 6</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG7.jpg" alt="Trip Image 7" loading="lazy">
+							<div class="gallery-overlay">Trip 7</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG8.jpg" alt="Trip Image 8" loading="lazy">
+							<div class="gallery-overlay">Trip 8</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG9.jpg" alt="Trip Image 9" loading="lazy">
+							<div class="gallery-overlay">Trip 9</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG10.jpg" alt="Trip Image 10" loading="lazy">
+							<div class="gallery-overlay">Trip 10</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG11.jpg" alt="Trip Image 11" loading="lazy">
+							<div class="gallery-overlay">Trip 11</div>
+				</div>
+				<div class="gallery-item" data-type="adventure">
+							<img src="IMG12.jpg" alt="Trip Image 12" loading="lazy">
+							<div class="gallery-overlay">Trip 12</div>
+				</div>
+				<div class="gallery-item" data-type="beach">
+							<img src="ballonholidays.jpg" alt="Balloon Holidays Trip" loading="lazy">
+							<div class="gallery-overlay">Balloon Holidays</div>
+				</div>
+				<div class="gallery-item" data-type="nature">
+							<img src="Kayakingandcanoeing.jpg" alt="Kayaking and Canoeing Trip" loading="lazy">
+							<div class="gallery-overlay">Kayaking & Canoeing</div>
+				</div>
+				<div class="gallery-item" data-type="nature">
+							<img src="GREECE.jpg" alt="Greece Trip" loading="lazy">
+							<div class="gallery-overlay">Greece</div>
+				</div>
+				<div class="gallery-item" data-type="nature">
+							<img src="BGROME.jpg" alt="Rome Trip" loading="lazy">
+							<div class="gallery-overlay">Rome</div>
+				</div>
+				<div class="gallery-item" data-type="nature">
+							<img src="bgnewzealand.jpg" alt="New Zealand Trip" loading="lazy">
+							<div class="gallery-overlay">New Zealand</div>
+				</div>
+			</div>
+			<style>
+			.gallery-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				gap: 32px;
+				padding: 40px 18px;
+			}
+			.gallery-item {
+				background: rgba(255,255,255,0.85);
+				border-radius: 22px;
+				box-shadow: 0 4px 24px rgba(10,61,98,0.13);
+				transition: transform 0.3s, box-shadow 0.3s;
+				overflow: hidden;
+				position: relative;
+				cursor: pointer;
+			}
+			.gallery-item img {
+				width: 100%;
+				height: 320px;
+				object-fit: cover;
+				border-radius: 22px;
+				transition: filter 0.3s;
+			}
+			.gallery-overlay {
+				position: absolute;
+				left: 0; right: 0; bottom: 0;
+				background: linear-gradient(0deg, rgba(20,55,90,0.85) 80%, rgba(255,255,255,0.0) 100%);
+				color: #fffbe6;
+				font-size: 1.18em;
+				font-weight: 700;
+				padding: 18px 0 10px 0;
+				text-align: center;
+				opacity: 0;
+				transition: opacity 0.3s;
+				letter-spacing: 1px;
+			}
+			.gallery-item:hover {
+				transform: scale(1.05);
+				box-shadow: 0 12px 40px rgba(10,61,98,0.22);
+			}
+			.gallery-item:hover img {
+				filter: brightness(1.18) saturate(1.25);
+			}
+			.gallery-item:hover .gallery-overlay {
+				opacity: 1;
+			}
+			</style>
+		</section>
+	</main>
+	<!-- Modern Footer -->
+	<footer style="background:#f7f7fa;color:#14375a;padding:32px 0 18px 0;margin-top:48px;text-align:center;border-radius:22px 22px 0 0;box-shadow:0 -2px 18px rgba(10,61,98,0.08);">
+		<div style="margin-bottom:12px;">
+			<a href="#" style="margin:0 12px;color:#14375a;">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:22px;height:22px;vertical-align:middle;">
+			</a>
+			<a href="#" style="margin:0 12px;color:#14375a;">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:22px;height:22px;vertical-align:middle;">
+			</a>
+			<a href="#" style="margin:0 12px;color:#14375a;">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" style="width:22px;height:22px;vertical-align:middle;">
+			</a>
+		</div>
+		<div style="font-size:1.08em;">&copy; 2025 Aspire to Inspire. All rights reserved.</div>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<br><br><br><br><br><br>
+<table cellpadding="5" cellspacing="5">
+<tr>
+<th>
+<marquee scrollamount="30" direction="up" behavior="slide" scrolldelay="30">
+<img src="trekking.jpg" height="350" width="360"><a href="trekking.html">
+<h3 align="center"><font color="#000033" face="MS Reference Sans Serif">TREKKING</h3>
+</a></img>
+</th>
+<th>
+<marquee scrollamount="30" direction="up" behavior="slide" scrolldelay="30">
+<img src="riverrafting.jpg" height="350" width="360"><a href="trekking.html">
+<h3 align="center"><font color="#000033" face="MS Reference Sans Serif">RIVER RAFTING </h3>
+</a></img>
+</marquee>
+</th>
+<th>
+<marquee scrollamount="30" direction="up" behavior="slide" scrolldelay="30">
+<img src="beachday.jpg" height="350" width="360"><a href="trekking.html">
+<h3 align="center"><font color="#000033" face="MS Reference Sans Serif">BEACH DAY</h3>
+</a></img>
+</marquee>
+</th>
+</tr>
+<tr>
+<th>
+<marquee scrollamount="30" direction="up" behavior="slide" scrolldelay="30">
+<img src="ballonholidays.jpg" height="350" width="360"><a href="trekking.html">
+<h3 align="center"><font color="#000033" face="MS Reference Sans Serif">BALLON FLITHS</h3>
+</a></img>
+</th>
+</tr>
+</table>
+</body>
+</table>

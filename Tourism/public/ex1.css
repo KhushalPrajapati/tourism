@@ -1,0 +1,24 @@
+body {
+	background-color: #777777;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+ul{
+	float: right;
+	list-style-type: none;
+}
+ul li{
+	display: inline-block;
+}
+ul li a{
+	color:#000000;
+	text-decoration: none;
+	padding: 5px 25px;
+}
+ul li a:hover{
+ background-color: #FFFFFF;
+color: #000000;
+}
+
+	

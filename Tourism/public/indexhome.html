@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Let's Tour It!!</title>
+	<link rel="stylesheet" href="index1.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+	<!-- SEO Meta Tags -->
+	<meta name="description" content="Explore the world with Let's Tour It! Your ultimate travel companion for unforgettable adventures.">
+	<meta name="keywords" content="travel, tourism, adventure, vacation, tours">
+	<meta name="author" content="Let's Tour It">
+
+	<!-- Open Graph Meta Tags for Social Media -->
+	<meta property="og:title" content="Let's Tour It - Your Travel Companion">
+	<meta property="og:description" content="Discover amazing destinations and create unforgettable memories with Let's Tour It!">
+	<meta property="og:image" content="index1logofinal.jpg">
+	<meta property="og:url" content="https://www.letstourit.com">
+	<meta property="og:type" content="website">
+
+	<!-- Structured Data for SEO -->
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "TravelAgency",
+	  "name": "Let's Tour It",
+	  "url": "https://www.letstourit.com",
+	  "logo": "index1logofinal.jpg",
+	  "description": "Explore the world with Let's Tour It! Your ultimate travel companion for unforgettable adventures.",
+	  "sameAs": [
+	    "https://www.facebook.com/letstourit",
+	    "https://www.instagram.com/letstourit",
+	    "https://www.twitter.com/letstourit"
+	  ]
+	}
+	</script>
+</head>
+<body style="background: url('index1.jpg') no-repeat center center fixed; background-size: cover; margin:0; position:relative;">
+	<!-- Removed animated gradient background for a cleaner look -->
+	<header class="main-header" style="background:#fffbe6;box-shadow:0 2px 18px rgba(10,61,98,0.08);border-radius:22px 22px 0 0;position:relative;">
+		<img src="index1logofinal.jpg" alt="Logo" class="logo" style="max-width:120px; vertical-align:middle;">
+		<button class="nav-toggle" aria-label="Toggle navigation" style="display:none;position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;z-index:1001;">
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+		</button>
+		<nav class="navbar" style="background:#fffbe6;box-shadow:0 2px 18px rgba(10,61,98,0.08);border-radius:22px 22px 0 0;">
+			<ul class="nav-list" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px;margin:0;padding:0;list-style:none;">
+				<li><a href="indexhome.html">HOME</a></li>
+				<li><a href="indexabout.html">ABOUT</a></li>
+				<li><a href="indexservice.html">SERVICE</a></li>
+				<li><a href="indexgallery.html">GALLERY</a></li>
+				<li><a href="indexcontact.html">CONTACT</a></li>
+			</ul>
+		</nav>
+		<script>
+		// Responsive navbar toggle
+		const navToggle = document.querySelector('.nav-toggle');
+		const navbar = document.querySelector('.navbar');
+		navToggle.style.display = window.innerWidth <= 900 ? 'block' : 'none';
+		window.addEventListener('resize', function() {
+			navToggle.style.display = window.innerWidth <= 900 ? 'block' : 'none';
+			if(window.innerWidth > 900) {
+				navbar.style.display = 'block';
+			} else {
+				navbar.style.display = 'none';
+			}
+		});
+		navToggle.addEventListener('click', function() {
+			if(navbar.style.display === 'block') {
+				navbar.style.display = 'none';
+			} else {
+				navbar.style.display = 'block';
+			}
+		});
+		if(window.innerWidth <= 900) {
+			navbar.style.display = 'none';
+		}
+		</script>
+	</header>
+	<main>
+		<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none;">
+			<div style="width:100vw;height:100vh;background:linear-gradient(120deg,rgba(247,183,49,0.18) 0%,rgba(10,61,98,0.12) 100%);"></div>
+		</div>
+		<section class="hero" style="position:relative;overflow:hidden;">
+			<!-- Welcome Video -->
+		<!-- Video background removed for simplicity -->
+			<h1 style="animation: fadeInDown 1s cubic-bezier(.68,-0.55,.27,1.55);font-size:3em;">Welcome, Explorer!</h1>
+			<p style="animation: fadeInUp 1.2s cubic-bezier(.68,-0.55,.27,1.55);font-size:1.35em;max-width:600px;margin:0 auto 18px auto;">Your adventure starts here. We make travel easy, safe, and unforgettable. Browse our curated experiences and let us help you create memories for a lifetime!</p>
+			<a href="indexservice.html" class="cta-btn" style="animation: fadeInUp 1.5s cubic-bezier(.68,-0.55,.27,1.55);font-size:1.2em;">Start Your Journey</a>
+			<div style="position:absolute;top:-60px;right:-60px;width:180px;height:180px;background:radial-gradient(circle,#f7b731 60%,#fff0 100%);border-radius:50%;z-index:0;animation: popIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);"></div>
+			<!-- Fun Stats -->
+			<div style="display:flex;justify-content:center;gap:38px;margin-top:32px;">
+				<div style="background:rgba(255,255,255,0.18);backdrop-filter:blur(8px);border-radius:12px;padding:18px 28px;box-shadow:0 2px 12px rgba(10,61,98,0.07);">
+					<span style="font-size:2.2em;font-weight:700;color:#f39c12;" id="stat-trips">120+</span><br>
+					<span style="font-size:1.1em;color:#14375a;">Trips Organized</span>
+				</div>
+				<div style="background:rgba(255,255,255,0.18);backdrop-filter:blur(8px);border-radius:12px;padding:18px 28px;box-shadow:0 2px 12px rgba(10,61,98,0.07);">
+					<span style="font-size:2.2em;font-weight:700;color:#f39c12;" id="stat-customers">500+</span><br>
+					<span style="font-size:1.1em;color:#14375a;">Happy Customers</span>
+				</div>
+				<div style="background:rgba(255,255,255,0.18);backdrop-filter:blur(8px);border-radius:12px;padding:18px 28px;box-shadow:0 2px 12px rgba(10,61,98,0.07);">
+					<span style="font-size:2.2em;font-weight:700;color:#f39c12;" id="stat-destinations">35+</span><br>
+					<span style="font-size:1.1em;color:#14375a;">Destinations</span>
+				</div>
+			</div>
+		</section>
+		<!-- Featured Destinations -->
+		<section class="features" id="featured-destinations" style="margin-top:48px;">
+			<div class="feature-card" style="animation: fadeInUp 1.1s cubic-bezier(.68,-0.55,.27,1.55);">
+				<img src="WONDERSOFTHEWORLD.JPG" alt="Wonders of the World" class="feature-img">
+				<a href="WONDERSOFTHEWORLD.HTML" class="feature-link">Wonders of the World</a>
+				<p style="font-size:0.98em;color:#14375a;margin-top:8px;">See the most iconic wonders on earth with our curated tours.</p>
+			</div>
+			<div class="feature-card" style="animation: fadeInUp 1.2s cubic-bezier(.68,-0.55,.27,1.55);">
+				<img src="AIRTRAVELLING.JPG" alt="Air Travelling" class="feature-img">
+				<a href="AIRTRAVELLING.HTML" class="feature-link">Air Travelling</a>
+				<p style="font-size:0.98em;color:#14375a;margin-top:8px;">Fly in comfort and style to your dream destinations.</p>
+			</div>
+			<div class="feature-card" style="animation: fadeInUp 1.3s cubic-bezier(.68,-0.55,.27,1.55);">
+				<img src="ADVENTURE.JPG" alt="Adventure" class="feature-img">
+				<a href="ADVENTURE.HTML" class="feature-link">Adventure</a>
+				<p style="font-size:0.98em;color:#14375a;margin-top:8px;">Experience thrilling adventures and outdoor activities.</p>
+			</div>
+		</section>
+		<!-- Testimonials -->
+		<section style="max-width:900px;margin:48px auto 0 auto;">
+			<h2 style="text-align:center;color:#0a3d62;margin-bottom:24px;">What Our Customers Say</h2>
+			<div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;">
+				<div style="background:rgba(255,255,255,0.18);backdrop-filter:blur(8px);border-radius:14px;padding:18px 22px;box-shadow:0 2px 12px rgba(10,61,98,0.07);max-width:320px;">
+					<p style="font-size:1.08em;color:#14375a;">“The best travel experience ever! Everything was perfectly organized.”</p>
+					<span style="font-weight:700;color:#f39c12;">- Priya S.</span>
+				</div>
+				<div style="background:rgba(255,255,255,0.18);backdrop-filter:blur(8px);border-radius:14px;padding:18px 22px;box-shadow:0 2px 12px rgba(10,61,98,0.07);max-width:320px;">
+					<p style="font-size:1.08em;color:#14375a;">“Amazing destinations and friendly staff. Highly recommended!”</p>
+					<span style="font-weight:700;color:#f39c12;">- Amit R.</span>
+				</div>
+				<div style="background:rgba(255,255,255,0.18);backdrop-filter:blur(8px);border-radius:14px;padding:18px 22px;box-shadow:0 2px 12px rgba(10,61,98,0.07);max-width:320px;">
+					<p style="font-size:1.08em;color:#14375a;">“I loved the adventure package! Will book again.”</p>
+					<span style="font-weight:700;color:#f39c12;">- Khushal M.</span>
+				</div>
+			</div>
+		</section>
+		<!-- Newsletter Signup -->
+		<section style="max-width:700px;margin:48px auto 0 auto;text-align:center;">
+			<h2 style="color:#0a3d62;">Subscribe to Our Newsletter</h2>
+			<form style="display:flex;flex-direction:column;gap:14px;align-items:center;margin-top:18px;">
+				<input type="email" placeholder="Your email address" style="padding:12px;width:80%;border-radius:8px;border:1px solid #ccc;">
+				<button type="submit" class="cta-btn" style="width:85%;margin-top:10px;">Subscribe</button>
+			</form>
+		</section>
+
+		<!-- Modern Footer -->
+		<footer style="background: #fffbe6; color: #14375a; padding: 32px 0 18px 0; margin-top:48px; text-align:center; border-radius:0 0 22px 22px; box-shadow:0 -2px 18px rgba(10,61,98,0.08); display:flex; flex-direction:column; align-items:center;">
+			<div style="display:flex;justify-content:center;gap:24px;margin-bottom:12px;">
+				<a href="#" style="color:#14375a;transition:color 0.2s;">
+					<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:28px;height:28px;vertical-align:middle;">
+				</a>
+				<a href="#" style="color:#14375a;transition:color 0.2s;">
+					<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:28px;height:28px;vertical-align:middle;">
+				</a>
+				<a href="#" style="color:#14375a;transition:color 0.2s;">
+					<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" style="width:28px;height:28px;vertical-align:middle;">
+				</a>
+			</div>
+			<div style="font-size:1.08em;">&copy; 2025 Aspire to Inspire. All rights reserved.</div>
+		</footer>
+		<!-- Floating Action Button -->
+		<a href="indexcontact.html" style="position:fixed;bottom:32px;right:32px;z-index:99;background:#f39c12;color:#fff;border-radius:50%;width:62px;height:62px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(243,156,18,0.18);font-size:2em;text-decoration:none;transition:background 0.2s;" title="Contact Us">&#9993;</a>
+
+		</section>
+	</main>
+	<style>
+	@keyframes fadeInDown {
+		0% { opacity:0; transform:translateY(-40px); }
+		100% { opacity:1; transform:translateY(0); }
+	}
+	@keyframes fadeInUp {
+		0% { opacity:0; transform:translateY(40px); }
+		100% { opacity:1; transform:translateY(0); }
+	}
+	@keyframes popIn {
+		0% { opacity:0; transform:scale(0.5); }
+		100% { opacity:1; transform:scale(1); }
+	}
+	</style>
+	<!-- Font Awesome for social icons -->
+	<script src="https://kit.fontawesome.com/4b8b7b9e2a.js" crossorigin="anonymous"></script>
+</body>
+</html>

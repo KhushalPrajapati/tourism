@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Let's Tour It!!</title>
+	<link rel="stylesheet" href="index1.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body style="background: url('contact.jpg') no-repeat center center fixed; background-size: cover; margin:0;">
+	<header class="main-header" style="background:#fffbe6;box-shadow:0 2px 18px rgba(10,61,98,0.08);border-radius:22px 22px 0 0;position:relative;">
+		<img src="index1logofinal.jpg" alt="Logo" class="logo" style="max-width:120px; vertical-align:middle;">
+		<button class="nav-toggle" aria-label="Toggle navigation" style="display:none;position:absolute;top:24px;right:24px;background:none;border:none;cursor:pointer;z-index:1001;">
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+			<span style="display:block;width:28px;height:4px;background:#14375a;margin:6px 0;border-radius:2px;"></span>
+		</button>
+		<nav class="navbar" style="background:#fffbe6;box-shadow:0 2px 18px rgba(10,61,98,0.08);border-radius:22px 22px 0 0;">
+			<ul class="nav-list" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px;margin:0;padding:0;list-style:none;">
+				<li><a href="indexhome.html">HOME</a></li>
+				<li><a href="indexabout.html">ABOUT</a></li>
+				<li><a href="indexservice.html">SERVICE</a></li>
+				<li><a href="indexgallery.html">GALLERY</a></li>
+				<li><a href="indexcontact.html">CONTACT</a></li>
+			</ul>
+		</nav>
+		<script>
+		// Responsive navbar toggle
+		const navToggle = document.querySelector('.nav-toggle');
+		const navbar = document.querySelector('.navbar');
+		navToggle.style.display = window.innerWidth <= 900 ? 'block' : 'none';
+		window.addEventListener('resize', function() {
+			navToggle.style.display = window.innerWidth <= 900 ? 'block' : 'none';
+			if(window.innerWidth > 900) {
+				navbar.style.display = 'block';
+			} else {
+				navbar.style.display = 'none';
+			}
+		});
+		navToggle.addEventListener('click', function() {
+			if(navbar.style.display === 'block') {
+				navbar.style.display = 'none';
+			} else {
+				navbar.style.display = 'block';
+			}
+		});
+		if(window.innerWidth <= 900) {
+			navbar.style.display = 'none';
+		}
+		</script>
+	</header>
+	<main>
+		<section class="hero">
+			<h1>Contact Us</h1>
+			<p>We'd love to hear from you! Reach out for any travel queries, package details, or support.</p>
+		</section>
+		<section class="features" style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;max-width:1000px;margin:40px auto 0 auto;">
+			<div class="feature-card" style="width:340px;">
+				<img src="travelmap.jpg" alt="Map" class="feature-img" style="height:180px;max-width:100%;">
+				<h2 style="color:#0a3d62;">Meet Us</h2>
+				<div style="text-align:left;font-size:1.08em;line-height:1.7;">
+					<img src="call.jpg" style="width:22px;height:22px;vertical-align:middle;margin-right:8px;"> +91 9106821068<br>
+					<img src="mail.jpg" style="width:22px;height:22px;vertical-align:middle;margin-right:8px;"> dhrumimodi14@gmail.com<br>
+					<img src="spot.jpg" style="width:22px;height:22px;vertical-align:middle;margin-right:8px;"> EXPLORO TRAVEL AGENCY<br>
+					507, EVENTI, CHIMANLAL<br>
+					GIRDHARLAL RD, OPP. LORDS<br>
+					ECO INN HOTEL,<br>
+					NAVRANGPURA, AHMEDABAD, GUJARAT<br>
+					380009
+				</div>
+			</div>
+			<div class="feature-card" style="width:340px;">
+				<form style="display:flex;flex-direction:column;gap:16px;align-items:center;">
+					<h2 style="color:#0a3d62;">Pitch Us</h2>
+					<input type="text" placeholder="Your Name" style="padding:10px;width:90%;border-radius:8px;border:1px solid #ccc;">
+					<input type="email" placeholder="Your E-mail" style="padding:10px;width:90%;border-radius:8px;border:1px solid #ccc;">
+					<input type="text" placeholder="Your Package" style="padding:10px;width:90%;border-radius:8px;border:1px solid #ccc;">
+					<button type="submit" class="cta-btn" style="width:95%;margin-top:10px;">Submit</button>
+				</form>
+			</div>
+		</section>
+	</main>
+	<!-- Modern Footer -->
+	<footer style="background:#f7f7fa;color:#14375a;padding:32px 0 18px 0;margin-top:48px;text-align:center;border-radius:22px 22px 0 0;box-shadow:0 -2px 18px rgba(10,61,98,0.08);">
+		<div style="margin-bottom:12px;">
+			<a href="#" style="margin:0 12px;color:#14375a;">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:22px;height:22px;vertical-align:middle;">
+			</a>
+			<a href="#" style="margin:0 12px;color:#14375a;">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:22px;height:22px;vertical-align:middle;">
+			</a>
+			<a href="#" style="margin:0 12px;color:#14375a;">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" style="width:22px;height:22px;vertical-align:middle;">
+			</a>
+		</div>
+		<div style="font-size:1.08em;">&copy; 2025 Aspire to Inspire. All rights reserved.</div>
+	</footer>
+</body>
+</html>
